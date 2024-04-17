@@ -1,0 +1,150 @@
+
+.wrap {
+  display: table-cell;
+  vertical-align: middle;
+}
+.wrap .RadioBtnsWrap {
+  display: inline-block;
+  position: relative;
+  width: 140px;
+}
+.wrap .RadioBtnsWrap label {
+  display: inline-block;
+  position: relative;
+  margin-left: 40px;
+  text-align: left;
+  height: 40px;
+  line-height: 40px;
+  min-width: 100px;
+  font-size: 16px;
+}
+.wrap .RadioBtnsWrap label:not(:nth-of-type(1)) {
+  margin-top: 17px;
+}
+.wrap .Radio {
+  -webkit-appearance: none;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: none;
+}
+.wrap .RadioBtnsWrap label::after {
+  content: 'x';
+  color: transparent;
+  position: absolute;
+  left: -44px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 10px;
+  height: 10px;
+  background-color: #FFFFFF;
+  display: inline-block;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-color: #79C5FF;
+  border-style: solid;
+  border-width: 8px;
+  transition: background-color 0.6s, border-width 0.4s, width 0.6s, height 0.6s, left 0.6s;
+  -webkit-transition: background-color 0.6s, border-width 0.4s, width 0.6s, height 0.6s, left 0.6s;
+  -webkit-box-shadow: 0px 2px 3px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 2px 3px -1px rgba(0, 0, 0, 0.75);
+}
+.wrap .Radio:checked + label::after {
+  background-color: #c5416e;
+  width: 20px;
+  height: 20px;
+  left: -47px;
+  border-width: 6px;
+  -webkit-box-shadow: 0px 2px 3px -1px rgba(0, 0, 0, 0.75), inset 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 2px 3px -1px rgba(0, 0, 0, 0.75), inset 0px 0px 5px 1px rgba(0, 0, 0, 0.75);
+}
+.wrap .RadioBtnsWrap label:not(:nth-of-type(1))::before {
+  content: '';
+  position: absolute;
+  left: -35px;
+  height: 57px;
+  width: 8px;
+  display: inline-block;
+  background-color: #79C5FF;
+  -webkit-box-shadow: 1px 4px 2px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 4px 2px 1px rgba(0, 0, 0, 0.25);
+}
+.wrap .RadioBtnsWrap label::before {
+  bottom: 28px;
+}
+.wrap .Radio:checked + label + input + label::before {
+  height: 52px;
+  transition: height .0s linear .3s;
+  -webkit-transition: height .0s linear .3s;
+}
+select {
+    font-family: 'Century Gothic';
+   font-weight: bold;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background:  #B77BF7  ;
+  background-image: none;
+}
+/* Custom Select */
+.select {
+  
+ 
+  position: relative;
+  display: block;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background: #2c3e50;
+  overflow: hidden;
+  border-radius: .25em;
+   font-family: 'Century Gothic';
+   font-weight: bold;
+}
+select {
+  font-family: 'Century Gothic';
+   font-weight: bold;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0 0 0 .5em;
+  color: #fff;
+  cursor: pointer;
+}
+select::-ms-expand {
+  display: none;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 1em;
+  background: #9F0AFA;
+  pointer-events: none;
+  font-family: 'Century Gothic';
+   font-weight: bold;
+}
+/* Transition */
+.select:hover::after {
+  color:#D4F960   ;
+}
+.select::after {
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+
+
