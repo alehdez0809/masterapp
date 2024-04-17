@@ -26,7 +26,7 @@ public class Main {
     public static void main(String[] args) {
         // TODO code application logic here
         try{
-            String webPort = System.getenv("PORT");
+            String webPort = System.getenv("JAVA_OPTS");
             if(webPort == null || webPort.isEmpty()) {
                 webPort = "8080"; // Puerto por defecto en caso de que no esté definido por Heroku
             }
