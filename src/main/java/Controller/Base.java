@@ -17,12 +17,17 @@ public class Base {
             return DriverManager.getConnection("jdbc:mysql://localhost:3306/masterapp", "root", "n0m3l0");
         }
         
+        try {
             URI dbUri = new URI(dbUrl);
             String username = dbUri.getUserInfo().split(":")[0];
             String password = dbUri.getUserInfo().split(":")[1];
             String dbConnUrl = "jdbc:mysql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
 
-        return DriverManager.getConnection(dbConnUrl, username, password);
+            return DriverManager.getConnection(dbConnUrl, username, password);
+        } catch (URISyntaxException e) {
+            // Esto convierte la URISyntaxException en una RuntimeException.
+            throw new RuntimeException("Error en la configuración de la URL de la base de datos", e);
+        }
     }
     
     public boolean registroEstudiante (String nom, String aPat, String aMat, String num, String del, String email, String contra) {
